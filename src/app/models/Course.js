@@ -19,6 +19,7 @@ const Course = db.sequelize.define('courses', {
 (async () => {
     try {
         await db.sequelize.sync();
+        console.log('Sync Course model with db successfully');
     } catch (error) {
         console.log('Sync Course model with db fail: ' + String(error));
     }
