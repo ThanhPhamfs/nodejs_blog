@@ -27,7 +27,7 @@
   "homepage": "https://github.com/ThanhPhamfs/nodejs-blog#readme",
   "lint-staged": {
     "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write",
-    "src/*.{js,json}" : "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+    "src/*.{js,json}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
   },
   "husky": {
     "hooks": {
@@ -37,7 +37,8 @@
   "dependencies": {
     "express": "^4.18.2",
     "express-handlebars": "^7.0.7",
-    "mysql": "^2.18.1"
+    "mysql2": "^3.3.0",
+    "sequelize": "^6.31.1"
   },
   "devDependencies": {
     "husky": "^4.3.8",
