@@ -41,14 +41,4 @@ const connect = async () => {
         return false;
     }
 };
-
-// Sync db
-const syncModelDb = async () => {
-    try {
-        await sequelize.sync();
-        console.log('Sync Course model with db successfully');
-    } catch (error) {
-        console.log('Sync Course model with db fail: ' + String(error));
-    }
-};
-module.exports = { connect, sequelize, syncModelDb };
+module.exports = { connect, sequelize };
