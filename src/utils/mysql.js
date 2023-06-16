@@ -3,6 +3,6 @@ module.exports = {
         return mysqlModelArray.map((item) => item.dataValues);
     },
     mysqlModelToObject: (mysqlModel) => {
-        return mysqlModel.dataValues;
+        return mysqlModel?.dataValues ? mysqlModel.dataValues : mysqlModel;
     },
 };

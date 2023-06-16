@@ -8,6 +8,7 @@ class SiteController {
     index = async (req, res) => {
         try {
             var courses = await Course.findAll();
+            console.log('courses.length', courses.length);
             res.render('home', {
                 courses: mutipleMysqlModelToObject(courses),
             });

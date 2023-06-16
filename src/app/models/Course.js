@@ -6,6 +6,11 @@ const Course = db.sequelize.define('courses', {
         type: DataTypes.STRING,
         allowNull: false,
     },
+    slug: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true,
+    },
     description: {
         type: DataTypes.TEXT,
         allowNull: true,
@@ -26,7 +31,7 @@ const Course = db.sequelize.define('courses', {
 
 (async () => {
     try {
-        await db.sequelize.sync();
+        await db.sequelize.sync({ alter: true });
         console.log('Sync Course model with db successfully');
     } catch (error) {
         console.log('Sync Course model with db fail: ' + String(error));
